@@ -1,12 +1,55 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-image: url(../images/cover-image-light.png);
+  --bg-color: #FFF1F7;
+  --title-text-color: #353430;
+  --accent-color: #353430;
+  --text-color: #353430;  
+  --title-color: #FFC2E6;
+  --shadow-header-color: #FF8DCB;
+  --shadow-footer-color: #FF0070;
+  --title-decor-color: #FF8DCB;
+  --outline-hover-color: rgba(50, 49, 45, 0.4);
+}
+
+:root.theme-light .header__theme-menu-button_type_dark {
+  outline: none;
+}
+
+:root.theme-light .header__theme-menu-button_type_auto {
+  outline: none;
+}
+
+:root.theme-light .header__theme-menu-button_type_light {
+  outline: 1px solid var(--accent-color);
+}
+
+:root.theme-light .rec-label {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url(../images/cover-image-light.png);
+    --bg-color: #FFF1F7;
+    --title-text-color: #353430;
+    --accent-color: #353430;
+    --text-color: #353430;  
+    --title-color: #FFC2E6;
+    --shadow-header-color: #FF8DCB;
+    --shadow-footer-color: #FF0070;
+    --title-decor-color: #FF8DCB;
+    --outline-hover-color: rgba(50, 49, 45, 0.4);
+  }
+  
+  .header__theme-menu-button_type_dark {
+    outline: none;
+  }
+
+  .header__theme-menu-button_type_auto {
+    outline: 1px solid var(--accent-color);
+  }
+
+  .rec-label {
+    display: none;
+  }
 }
