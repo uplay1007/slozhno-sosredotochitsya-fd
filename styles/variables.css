@@ -1,7 +1,9 @@
-@import url(../fonts/fonts.css);
-
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
 :root {
-  --bg-image: url(../images/cover-image.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --padding: 10px;
   --font-family: 'IBM';
@@ -18,4 +20,13 @@
   --gap-main: 50px;
   --gap-section: 20px;
   --line-height: 23.4px;
+}
+
+
+@media (width >= 768px) {
+  :root {
+    --padding: 20px;
+    --gap-page: 60px;
+    --gap-main: 80px;
+  }
 }
