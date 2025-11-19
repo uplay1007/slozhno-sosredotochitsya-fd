@@ -1,4 +1,14 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
 :root.theme-dark {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --accent-color: #FF0070;
@@ -11,18 +21,6 @@
   --outline-hover-color: rgba(255, 0, 112, 0.4);
 }
 
-:root.theme-dark .header__theme-menu-button_type_light {
-  outline: none;
-}
-
-:root.theme-dark .header__theme-menu-button_type_dark {
-  outline: 1px solid var(--accent-color);
-}
-
 :root.theme-dark .rec-label {
   display: flex;
-}
-
-:root.theme-dark .header__theme-menu-button_type_auto {
-  outline: none;
 }
