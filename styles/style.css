@@ -1,4 +1,7 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 .page {
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: var(--font-family, monospace);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
@@ -32,16 +35,12 @@
   position: relative;
 }
 
-.decorated-zone::before,
-.decorated-zone::after {
+.decorated-zone::before {
   content: "";
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
   border: 1px solid var(--accent-color, #FF0070);
-}
-
-.decorated-zone::before {
   top: var(--padding);
   right: 0;
   border-inline-start: none;
@@ -49,6 +48,11 @@
 }
 
 .decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border: 1px solid var(--accent-color, #FF0070);
   bottom: var(--padding);
   left: 0;
   border-inline-end: none;
@@ -90,14 +94,11 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--outline-hover-color);
-}
-
-.header__theme-menu-button_type_auto {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--outline-hover-color);
 }
 
 .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
   pointer-events: none;
 }
 
@@ -239,17 +240,6 @@
 }
 
 @media (width >= 768px) {
-  :root {
-    --padding: 20px;
-    --gap-page: 60px;
-    --gap-main: 80px;
-  }
-
-  .page {
-    padding-inline-start: var(--padding);
-    padding-inline-end: var(--padding);
-    gap: var(--gap-page);
-  }
 
   .header {
     display: grid;
