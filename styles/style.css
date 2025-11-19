@@ -223,6 +223,12 @@
   object-fit: cover;
 }
 
+.section__gallery-container-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
 .footer {
   block-size: 100vh;
   min-block-size: 667px;
